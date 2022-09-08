@@ -11,7 +11,7 @@ body {
 }
 
 .logo {
-    background: url(img/logo.svg);
+    background: url(images/logo.svg);
     width: 185px;
     height: 25px;
     margin: 15px auto 21px;
@@ -23,14 +23,26 @@ body {
     border-bottom: 1px solid #B4ACAA;
     padding: 18px;
     margin-bottom: 60px;
+    position: absolute;
+    background: #2F5A66;
+    left: 15px;
+    right: 15px;
+}
+
+@media screen and (min-width: 768px) { 
+    .nav-wrapper  {
+        position: static;
+        background: transparent;  
+        display: flex;
+    }
 }
 
 .nav-wrapper nav {
-    display: inline-block;
+    
 }
 
 .nav {
-    display: inline-block;
+    
     list-style: none;
     margin: 0;
     padding: 0;
@@ -40,8 +52,23 @@ body {
     display: inline-block;
 }
 
+.lang-nav {
+    width: 20%;
+    text-align: left;
+}
+
 .lang-nav li {
     padding: 0 10px;
+}
+
+.main-nav {
+    width: 60%;    
+}
+
+@media screen and (min-width: 768px) {
+    .main-nav {
+        text-align: center;
+    }
 }
 
 .main-nav li {
@@ -49,8 +76,23 @@ body {
 }
 
 .nav a {
-    color: #7A6F6B;
+    color: #EDECE8;
     text-decoration: none;
+}
+
+.nav li {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .nav a {
+        color: #7A6F6B;
+    }
+    .nav li {
+        font-weight: normal;
+        font-size: 16px;
+    }
 }
 
 .nav a:hover {
@@ -61,13 +103,29 @@ body {
     color: #474443;
 }
 
+.header-cart {
+    width: 20%;
+    text-align: right;
+    display: none;
+}
+
 .intro__image {
-    background: url(img/intro.jpg) no-repeat center;
+    background: url(images/intro.jpg) no-repeat center;
     background-size: cover;
-    padding: 80px 100px;
+    padding: 120px 15px;
     min-height: 600px;
     box-sizing: border-box;    
 }
+
+@media screen and (min-width: 768px) {
+    .intro__image {
+        padding: 80px 100px;
+    }
+    .header-cart {
+        display: block;
+    }
+}
+
 
 .intro__image-inner {
     width: 50%;
@@ -80,5 +138,40 @@ h1, h2, h3, h4, h5 {
     
 }
 h1 {
-    font-size: 56px;
+    font-size: 36px;
+}
+
+@media screen and (min-width: 768px) { 
+    h1 {
+            font-size: 56px;
+    }
+}
+
+.header-icon {
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    border: none;
+    padding: 8px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-mobile-button {
+    background-image: url(images/icon-menu.svg);
+}
+.cart-mobile-button { 
+    background-image: url(images/icon-cart.svg);
+}
+
+.header-logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) { 
+    .menu-mobile, .cart-mobile {
+        display: none;
+    }
 }

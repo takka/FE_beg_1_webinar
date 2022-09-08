@@ -8,19 +8,28 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
+    <meta name="viewport" content="initial-scale=1.0" />
 </head>
 
 <body>
     <div class="container">
         <header>
-            <a href="/" class="logo"></a>
+            <div class="header-logo-wrapper">
+                <div class="menu-mobile">
+                    <button class="menu-mobile-button header-icon"></button>
+                </div>
+                <a href="/" class="logo"></a>
+                <div class="cart-mobile">
+                    <a href="" class="cart-mobile-button header-icon">0</a>
+                </div>
+            </div>
             <div class="nav-wrapper">
                 <ul class="nav lang-nav">
                     <li><a href="#">EN</a></li>
                     <li class="active"><a href="#">UA</a></li>
                 </ul>
-                <nav>
-                    <ul class="nav main-nav">
+                <nav class="main-nav">
+                    <ul class="nav">
                         <li><a href="">Про нас</a></li>
                         <li><a href="">Партнерство</a></li>
                         <li><a href="">Сертифікати</a></li>
